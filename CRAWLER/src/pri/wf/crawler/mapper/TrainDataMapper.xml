@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pri.wf.crawler.dao.TrainDataDao">
+	<insert id="insert" parameterType="pri.wf.crawler.entity.TrainData">
+        insert into  tb_schedule( train_no,station_train_code,start_station_telecode,
+        start_station_name,end_station_telecode,end_station_name,from_station_telecode,
+        from_station_name,to_station_telecode,to_station_name,start_time,arrive_time,
+        lishi,lishiValue) 
+        values(#{train_no},#{station_train_code},#{start_station_telecode},
+        #{start_station_name},#{end_station_telecode},#{end_station_name},
+        #{from_station_telecode},#{from_station_name},#{to_station_telecode},
+        #{to_station_name},#{start_time},#{arrive_time},
+        #{lishi},#{lishiValue})
+    </insert>
+</mapper>     
